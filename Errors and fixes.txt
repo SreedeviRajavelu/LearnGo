@@ -1,0 +1,22 @@
+Error:
+
+Starting: C:\Users\Sree Devi Rajavelu\go\bin\dlv.exe dap --listen=127.0.0.1:64437 from c:\Users\Sree Devi Rajavelu\Desktop\Distributed Systems and Computing\LearnGo\learn_go
+DAP server listening at: 127.0.0.1:64437
+Build Error: go build -o c:\Users\Sree Devi Rajavelu\Desktop\Distributed Systems and Computing\LearnGo\learn_go\__debug_bin170039384.exe -gcflags all=-N -l .
+go: cannot find main module, but found .git/config in c:\Users\Sree Devi Rajavelu
+	to create a module there, run:
+	cd ..\..\..\.. && go mod init (exit status 1)
+
+Fix:
+go mod init learn_go
+
+Explanation, go into directory and do: go mod [directory_name] 
+
+Example:
+1. Navigate to your project directory:
+
+cd C:\Users\Sree Devi Rajavelu\Desktop\Distributed Systems and Computing\LearnGo\learn_go
+
+2. Initialize a Go module in that directory:
+
+go mod init learn_go
