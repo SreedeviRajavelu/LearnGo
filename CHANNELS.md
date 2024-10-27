@@ -2,8 +2,7 @@ Channels are a typed conduit through which you can send and receive values with 
 
 ch <- v    // Send v to channel ch.
 
-v := <-ch  // Receive from ch, and
-           // assign value to v.
+v := <-ch  // Receive from ch and assign value to v.
            
 (The data flows in the direction of the arrow.)
 
