@@ -15,6 +15,20 @@ In Go language, a channel is a medium through which a goroutine communicates wit
 ![image](https://github.com/user-attachments/assets/d93e13ed-edfa-41b2-9131-8dc043b7e1ee)
 
 
+By default channels are unbuffered, which states that they will only accept sends (chan <-) if there is a corresponding receive (<- chan) which are ready to receive the sent value. 
+
+Buffered channels allow to accept a limited number of values without a corresponding receiver for those values. It is possible to create a channel with a buffer. 
+
+Buffered channel are blocked only when the buffer is full. 
+
+Similarly receiving from a buffered channel are blocked only when the buffer will be empty.
+
+
+Syntax :
+
+ch := make(chan type, capacity)           // chan defines channel type
+
+
 Output of running go run channel.go
 
 <img width="755" alt="image" src="https://github.com/user-attachments/assets/7f2d58ff-666d-4ec1-af08-bca3730fa44c">
