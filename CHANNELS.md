@@ -1,3 +1,19 @@
+Channels are a typed conduit through which you can send and receive values with the channel operator, <-.
+
+ch <- v    // Send v to channel ch.
+v := <-ch  // Receive from ch, and
+           // assign value to v.
+(The data flows in the direction of the arrow.)
+
+Like maps and slices, channels must be created before use:
+
+ch := make(chan int)
+
+In Go language, a channel is a medium through which a goroutine communicates with another goroutine and this communication is lock-free. Or in other words, a channel is a technique which allows to let one goroutine to send data to another goroutine. By default channel is bidirectional, means the goroutines can send or receive data through the same channel as shown in the below image:
+
+![image](https://github.com/user-attachments/assets/d93e13ed-edfa-41b2-9131-8dc043b7e1ee)
+
+
 Output of running go run channel.go
 
 <img width="755" alt="image" src="https://github.com/user-attachments/assets/7f2d58ff-666d-4ec1-af08-bca3730fa44c">
