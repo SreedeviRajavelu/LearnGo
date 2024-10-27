@@ -41,6 +41,7 @@ channel.go code, the write Goroutine has a for loop which writes numbers from 0 
 
 After that, the read value and then sleeps for 2 seconds again and this cycle continues until the ch is closed. So the program will print the following lines after 2 seconds, as :
 
-<img width="224" alt="image" src="https://github.com/user-attachments/assets/de4bf48a-08a5-4325-88cc-2f297e18e997">
+<img width="234" alt="image" src="https://github.com/user-attachments/assets/883eca79-79fd-4121-be59-f974df87fbe1">
+
 
 And this will continue until all values are written to the channel and it is closed in the write Goroutine.
