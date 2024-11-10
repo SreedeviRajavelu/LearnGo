@@ -12,6 +12,7 @@ import (
 
 func main() {
 	fmt.Println("Welcome Gophers !")
+	mean() // call the mean function
 } // always prefix the package name before the function we call
 
 // every function or symbol you use from another package start with an upper case
