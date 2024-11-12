@@ -1,6 +1,6 @@
-ERRORS & FIXES :
+## ERRORS & FIXES 
 
-PROBLEM: Server was waiting indefinitely
+### PROBLEM: Server was waiting indefinitely
 
 Need to start Server_Session in a separate go routine instead of just invoking both client and server like this
 
@@ -9,7 +9,7 @@ StartClient()
 
 both Server_Session() and StartClient() are being called sequentially, which means the client will only start after Server_Session() completes. Since Server_Session() is starting a TCP listener and then entering an indefinite loop to accept incoming connections, it doesn’t return or allow StartClient() to execute, which leads to the observed hang.
 
-FIX :
+### FIX :
 
   // Start the server in a separate goroutine
   go Server_Session()
