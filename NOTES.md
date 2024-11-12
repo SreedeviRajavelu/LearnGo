@@ -89,9 +89,10 @@ func server_session() {
 		}
 		go rpc.ServeConn(conn) // Handle the connection in a new goroutine
 	}
-}
+ }
 
 // Call server_session() in main function to start the server
 func main() {
 	server_session()
 }
+
