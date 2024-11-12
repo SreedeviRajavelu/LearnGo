@@ -40,11 +40,11 @@ you can add the necessary net and rpc logic. Here’s an updated version of the 
 initializing seats, starting the request monitor, registering the ServerSession struct for RPC, and beginning to listen for incoming client connections.
 
 ### Steps
-#### RPC Registration: 
+#### 1. RPC Registration: 
 rpc.Register(server) registers the methods of ServerSession for RPC, so clients can call these methods.
-#### Listener Initialization: 
+#### 2. Listener Initialization: 
 net.Listen("tcp", "127.0.0.1:8000") sets up a TCP listener on 127.0.0.1:8000.
-#### Accepting Connections: 
+#### 3. Accepting Connections: 
 A for loop is used to accept incoming connections, each handled in a new goroutine by rpc.ServeConn(conn).
 
 
